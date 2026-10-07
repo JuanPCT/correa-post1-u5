@@ -1,0 +1,14 @@
+### Listar reservas
+GET http://localhost:8080/api/reservas
+
+### Crear reserva (ajusta laboratorioId según el catálogo)
+POST http://localhost:8080/api/reservas
+Content-Type: application/json
+
+{"laboratorioId":1,"solicitante":"Juan Pablo Correa Tarazona","inicio":"2030-06-15T09:00:00","fin":"2030-06-15T10:00:00"}
+
+### Consultar una reserva
+GET http://localhost:8080/api/reservas/1
+
+### Cancelar sin borrar el registro
+DELETE http://localhost:8080/api/reservas/1
