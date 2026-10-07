@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Evidencia API · Reservas</title>
+<style>body{font:16px Arial,sans-serif;background:#f2f6f8;color:#203344;margin:0}.wrap{max-width:900px;margin:40px auto;padding:26px;background:#fff;border-radius:12px;box-shadow:0 8px 28px #15324b18}h1{color:#15324b}code,pre{font-family:Consolas,monospace}pre{padding:18px;background:#102a3a;color:#eaf3f5;border-radius:8px;overflow:auto}.ok{color:#087a3d}.error{color:#a42c2c}a{color:#137c8b}</style></head>
+<body><main class="wrap"><h1>Evidencia de API REST</h1><p>Solicitud ejecutada desde el navegador: <code>GET /api/reservas</code></p><p id="status">Consultando…</p><pre id="response"></pre><p><a href="/reservas">Abrir interfaz de reservas</a></p></main>
+<script>fetch('/api/reservas').then(async r=>{const body=await r.json();document.querySelector('#status').textContent=`HTTP ${r.status} · ${r.statusText}`;document.querySelector('#status').className=r.ok?'ok':'error';document.querySelector('#response').textContent=JSON.stringify(body,null,2)}).catch(e=>{document.querySelector('#status').textContent='No fue posible consultar la API';document.querySelector('#status').className='error';document.querySelector('#response').textContent=e.message})</script></body></html>

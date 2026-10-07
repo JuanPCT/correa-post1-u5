@@ -17,4 +17,4 @@ Catálogo inicial: laboratorios LAB-101 y LAB-202. La API ofrece `GET /api/reser
 
 ## Evidencias y pruebas
 
-`ReservaServiceTest` cubre creación, colisión de horario, duración y cancelación lógica sobre H2. Para las capturas solicitadas, iniciar la aplicación y guardar: (1) respuesta de `GET /api/reservas` o `POST` creado en el cliente REST; (2) página `/reservas` con filas; (3) formulario `/reservas/nueva`. El código y las pruebas están incluidos; la captura requiere ejecutar Maven en un equipo con acceso a Maven Central.
+`ReservaServiceTest` cubre creación, colisión de horario, duración y cancelación lógica sobre H2. La página [evidencias/api.html](src/main/resources/static/evidencias/api.html) consulta en vivo `GET /api/reservas` y presenta el JSON para una captura legible; las pantallas MVC están en `/reservas` y `/reservas/nueva`. Con la aplicación iniciada, captura esas tres vistas para anexarlas a la entrega.
