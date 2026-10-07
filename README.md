@@ -52,7 +52,7 @@ src/main/java/com/universidad/reservaslabs/
 
 ## Evidencias
 
-Las pruebas automatizadas incluyen la colisión de intervalo en el servicio, un error 409 en REST y el mismo mensaje en la vista MVC. Para obtener capturas de pantalla de las interfaces durante la demostración, inicia la aplicación y abre:
+Las pruebas automatizadas incluyen la colisión de intervalo en el servicio, un error 409 en REST y el mismo mensaje en la vista MVC. Las vistas se verificaron localmente; el repositorio todavía no incluye archivos PNG de capturas. Para capturarlas durante la demostración, inicia la aplicación y abre:
 
 - `http://localhost:8080/api/laboratorios` (catálogo REST).
 - `http://localhost:8080/reservas` (lista MVC).
