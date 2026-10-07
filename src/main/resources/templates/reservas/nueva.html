@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nueva reserva</title>
+<style>body{font-family:Arial,sans-serif;background:#f2f6f8;color:#203344;margin:0}.wrap{max-width:660px;margin:40px auto;padding:28px;background:white;border-radius:12px;box-shadow:0 8px 28px #15324b18}h1{color:#15324b}label{display:block;font-weight:600;margin:16px 0 6px}input,select{box-sizing:border-box;width:100%;padding:11px;border:1px solid #b9c9d0;border-radius:6px}button,a{display:inline-block;margin-top:20px;padding:11px 15px;border:0;border-radius:6px;background:#137c8b;color:white;text-decoration:none;cursor:pointer}.error{padding:12px;background:#fde8e8;color:#8b2424}</style></head>
+<body><main class="wrap"><h1>Solicitar laboratorio</h1><p>Horario permitido: 07:00–21:00. Duración: 30 minutos–3 horas.</p>
+<p th:if="${error}" class="error" th:text="${error}"></p>
+<form th:action="@{/reservas}" th:object="${form}" method="post"><label for="lab">Laboratorio</label><select id="lab" th:field="*{laboratorioId}" required><option value="">Seleccione…</option><option th:each="lab : ${laboratorios}" th:value="${lab.id}" th:text="${lab.codigo + ' — ' + lab.nombre}" th:disabled="${!lab.activo}"></option></select>
+<label for="solicitante">Solicitante</label><input id="solicitante" th:field="*{solicitante}" required maxlength="120">
+<label for="inicio">Inicio</label><input id="inicio" type="datetime-local" th:field="*{inicio}" required>
+<label for="fin">Fin</label><input id="fin" type="datetime-local" th:field="*{fin}" required>
+<button type="submit">Guardar reserva</button> <a th:href="@{/reservas}">Volver</a></form></main></body></html>
