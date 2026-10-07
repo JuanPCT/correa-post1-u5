@@ -1,6 +1,6 @@
-package co.edu.ufps.reservas.repositorio;
+package com.universidad.reservaslabs.repository;
 
-import co.edu.ufps.reservas.dominio.Laboratorio;
+import com.universidad.reservaslabs.model.Laboratorio;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LaboratorioRepository extends JpaRepository<Laboratorio, Long> { }

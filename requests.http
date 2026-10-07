@@ -1,14 +1,26 @@
-### Listar reservas
+### Catálogo de laboratorios
+GET http://localhost:8080/api/laboratorios
+
+### Crear laboratorio
+POST http://localhost:8080/api/laboratorios
+Content-Type: application/json
+
+{"nombre":"Laboratorio de Innovación","ubicacion":"Bloque C · 303","capacidad":28,"tipo":"Innovación"}
+
+### Reservas existentes
 GET http://localhost:8080/api/reservas
 
-### Crear reserva (ajusta laboratorioId según el catálogo)
+### Crear una solicitud (ajusta laboratorioId con el catálogo)
 POST http://localhost:8080/api/reservas
 Content-Type: application/json
 
-{"laboratorioId":1,"solicitante":"Juan Pablo Correa Tarazona","inicio":"2030-06-15T09:00:00","fin":"2030-06-15T10:00:00"}
+{"laboratorioId":1,"nombreSolicitante":"Juan Pablo Correa Tarazona","correoSolicitante":"juan.correa@example.edu.co","inicio":"2030-06-15T09:00:00","fin":"2030-06-15T10:00:00","motivo":"Práctica de integración de servicios"}
 
-### Consultar una reserva
+### Consultar reserva por id
 GET http://localhost:8080/api/reservas/1
 
-### Cancelar sin borrar el registro
+### Filtrar por laboratorio
+GET http://localhost:8080/api/reservas/laboratorio/1
+
+### Cancelación lógica
 DELETE http://localhost:8080/api/reservas/1
